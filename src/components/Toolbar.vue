@@ -3,17 +3,19 @@
         nav
             img(:src="require('../assets/Logo.svg')")
             ul
-              li Melhor Envio
-              li Login
+              li 
+                a(href="https://www.melhorenvio.com.br/" target="_BLANK") Melhor Envio
+              li 
+                router-link(to="/rastreio") Login
               li
-                a cadastre-se
+                a.button(href="https://www.melhorenvio.com.br/cadastre-se" target="_BLANK") cadastre-se
               
 </template>
 <script>
 
 export default {
     name: 'Toolbar',
-}
+};
 </script>
 <style lang="stylus" scoped>
     nav
@@ -31,15 +33,26 @@ export default {
            li 
                margin 0 20px
                color #fff
-               a 
-                 color #2BC866
-                 background #fff
-                 padding 5px
-                 border-radius 4px
+               display flex
+               align-items center
 
-                 display flex
-                 justify-content center
-                 align-items center
+               a
+                color #fff
+                cursor pointer
+                text-decoration none 
+                background transparent
+
+               a.button 
+                cursor pointer
+                text-decoration none
+                color #2BC866
+                background #fff
+                padding 5px
+                border-radius 4px
+
+                display flex
+                justify-content center
+                align-items center
                 
 
         

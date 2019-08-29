@@ -43,9 +43,20 @@ export default {
                 h1
                     text-align left
                     color #fff
+                    position relative
                     font-weight 900
                     font-size 36px
-                    width 45%
+                    width 40%
+                    &:after
+                        content " "
+                        position absolute
+                        width 25%
+                        bottom -30px
+                        left 0
+                        right: 0
+                        height 0.5em
+                        border-top 4px solid #fff
+                        z-index 1
 
                 p
                     text-align left

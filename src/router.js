@@ -16,7 +16,7 @@ export default new Router({
             component: Home
         },
         {
-            path: "/track",
+            path: "/rastreio",
             name: "track",
             component: Track
         }
