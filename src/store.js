@@ -5,12 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    track: []
+  },
+  getters: {
+    getTrack: state => {
+        return state.track.data
+    }
   },
   mutations: {
-
-  },
-  actions: {
-
+    setTrack(state, track) {
+        state.track = track
+    }
   }
 })

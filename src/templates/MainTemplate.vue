@@ -52,7 +52,7 @@ export default {
             font-size 24px 
             display block
     div
-       padding 90px
+       padding 20px 90px
        margin 20px
        
     footer
