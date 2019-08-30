@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import Home from "./views/Home.vue";
-import Track from "./views/Track.vue";
+import Tracking from "./views/Tracking.vue";
 
 Vue.use(Router);
 
@@ -17,8 +17,8 @@ export default new Router({
         },
         {
             path: "/rastreio",
-            name: "track",
-            component: Track
+            name: "tracking",
+            component: Tracking
         }
     ]
 });

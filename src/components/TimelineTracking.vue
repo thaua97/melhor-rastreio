@@ -40,7 +40,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
     div.container
-        padding 0px 90px
+        padding 0px 90pxf
         margin-bottom 90px
         display flex
         justify-content center
@@ -48,7 +48,7 @@ export default {
 
     div.timeline
         display flex
-        padding 0
+        padding 0 40px
         text-align center
         display flex
         align-items center

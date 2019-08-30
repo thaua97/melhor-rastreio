@@ -9,6 +9,13 @@
                 a(href="https://www.melhorenvio.com.br/login" target="_BLANK") Login
               li
                 a.button(href="https://www.melhorenvio.com.br/cadastre-se" target="_BLANK") cadastre-se
+        ul.mobile-nav
+              li 
+                a(href="https://www.melhorenvio.com.br/" target="_BLANK") Melhor Envio
+              li 
+                a(href="https://www.melhorenvio.com.br/login" target="_BLANK") Login
+              li
+                a.button(href="https://www.melhorenvio.com.br/cadastre-se" target="_BLANK") cadastre-se   
               
 </template>
 <script>
@@ -54,6 +61,42 @@ export default {
                 padding 5px
                 border-radius 4px
 
+                display flex
+                justify-content center
+                align-items center
+        
+    ul.mobile-nav
+        display none
+           
+        @media screen and (min-width: 320px) and (max-width: 520px)
+            width 100%
+            position absolute
+            display flex
+            flex-direction column
+            align-items flex-star
+            background #3c2c2c
+            z-index 2
+
+        li 
+           margin 0 20px
+           color #fff
+           display flex
+           align-items center
+           padding 20px
+           
+           a
+                color #fff
+                cursor pointer
+                text-decoration none 
+                background transparent
+           
+           a.button 
+                cursor pointer
+                text-decoration none
+                color #2BC866
+                background #fff
+                padding 5px
+                border-radius 4px
                 display flex
                 justify-content center
                 align-items center   
