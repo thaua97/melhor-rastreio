@@ -2,6 +2,9 @@
     span
         nav
             img(:src="require('../assets/Logo.svg')")
+            button(v-on:click="loadMenu")
+              img(v-if="menu === false" :src="require('../assets/menu.svg')")
+              img(v-else :src="require('../assets/close.svg')")
             ul
               li 
                 a(href="https://www.melhorenvio.com.br/" target="_BLANK") Melhor Envio
@@ -9,7 +12,7 @@
                 a(href="https://www.melhorenvio.com.br/login" target="_BLANK") Login
               li
                 a.button(href="https://www.melhorenvio.com.br/cadastre-se" target="_BLANK") cadastre-se
-        ul.mobile-nav
+        ul.mobile-nav(v-if="menu")
               li 
                 a(href="https://www.melhorenvio.com.br/" target="_BLANK") Melhor Envio
               li 
@@ -22,6 +25,16 @@
 
 export default {
     name: 'Toolbar',
+    data () {
+      return {
+          menu: false
+      }
+    },
+    methods: {
+      loadMenu () {
+        this.menu = !this.menu
+      }
+    }
 };
 </script>
 <style lang="stylus" scoped>
@@ -35,25 +48,36 @@ export default {
         justify-content space-between
         align-items center
 
-        ul
-            display flex
-           
+        @media screen and (min-width: 320px) and (max-width: 520px)
+          padding 20px
+
+        button
+            display none
+            
             @media screen and (min-width: 320px) and (max-width: 520px)
-                display none
+              display flex
+              border none
+              background transparent
+              cursor pointer
+        ul
+          display flex
+           
+          @media screen and (min-width: 320px) and (max-width: 520px)
+              display none
+           
+          li 
+              margin 0 20px
+              color #fff
+              display flex
+              align-items center
 
-           li 
-               margin 0 20px
-               color #fff
-               display flex
-               align-items center
-
-               a
+              a
                 color #fff
                 cursor pointer
                 text-decoration none 
                 background transparent
 
-               a.button 
+              a.button 
                 cursor pointer
                 text-decoration none
                 color #2BC866
@@ -64,6 +88,9 @@ export default {
                 display flex
                 justify-content center
                 align-items center
+                
+                
+
         
     ul.mobile-nav
         display none
@@ -74,7 +101,8 @@ export default {
             display flex
             flex-direction column
             align-items flex-star
-            background #3c2c2c
+            background rgba(0,0,0,0.6)
+            box-shadow 0 8px 8px 0 rgba(0,0,0,0.3)
             z-index 2
 
         li 
@@ -85,11 +113,15 @@ export default {
            padding 20px
            
            a
-                color #fff
-                cursor pointer
-                text-decoration none 
-                background transparent
-           
+              color #fff
+              cursor pointer
+              text-decoration none 
+              background transparent
+              
+              @media screen and (min-width: 320px) and (max-width: 520px)
+                font-size 18px
+
+
            a.button 
                 cursor pointer
                 text-decoration none
@@ -99,5 +131,16 @@ export default {
                 border-radius 4px
                 display flex
                 justify-content center
-                align-items center   
+                align-items center
+
+                @media screen and (min-width: 320px) and (max-width: 520px)
+                  font-size 18px
+                  color #2BC866
+                  padding 0
+                  border none
+                  background transparent
+
+                  display flex
+                  justify-content center
+                  align-items center
 </style>

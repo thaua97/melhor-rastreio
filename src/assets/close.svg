@@ -1,0 +1,23 @@
+<svg id="Close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H40V40H0Z" fill="#f2f6f9"/>
+    </clipPath>
+  </defs>
+  <path id="Clip_2-2" data-name="Clip 2" d="M0,0H40V40H0Z" fill="none"/>
+  <g clip-path="url(#clip-path)">
+    <path id="Fill_1" data-name="Fill 1" d="M21.369,18.433,36.258,3.544A2.076,2.076,0,0,0,33.321.608L18.433,15.5,3.544.608A2.076,2.076,0,0,0,.608,3.544L15.5,18.433.608,33.321a2.076,2.076,0,1,0,2.936,2.936L18.433,21.369,33.321,36.258a2.076,2.076,0,1,0,2.936-2.936Z" transform="translate(1.351 1.351)" fill="#fff"/>
+    <g id="close-2" data-name="close" transform="translate(-243.859 -40.662)">
+      <path id="Caminho_3" data-name="Caminho 3" d="M8.154,5.318,7.836,5,6.577,6.259,5.318,5,5,5.318,6.259,6.577,5,7.836l.318.318L6.577,6.895,7.836,8.154l.318-.318L6.895,6.577Z" transform="translate(-3.874 -3.874)"/>
+      <path id="Caminho_4" data-name="Caminho 4" d="M0,0H5.407V5.407H0Z" fill="#fff"/>
+    </g>
+    <g id="close-3" data-name="close" transform="translate(-239.128 -53.277)">
+      <path id="Caminho_5" data-name="Caminho 5" d="M8.154,5.318,7.836,5,6.577,6.259,5.318,5,5,5.318,6.259,6.577,5,7.836l.318.318L6.577,6.895,7.836,8.154l.318-.318L6.895,6.577Z" transform="translate(-3.874 -3.874)"/>
+      <path id="Caminho_6" data-name="Caminho 6" d="M0,0H5.407V5.407H0Z" fill="#fff"/>
+    </g>
+    <g id="close-4" data-name="close" transform="translate(-235.299 -80.761)">
+      <path id="Caminho_7" data-name="Caminho 7" d="M8.154,5.318,7.836,5,6.577,6.259,5.318,5,5,5.318,6.259,6.577,5,7.836l.318.318L6.577,6.895,7.836,8.154l.318-.318L6.895,6.577Z" transform="translate(-3.874 -3.874)"/>
+      <path id="Caminho_8" data-name="Caminho 8" d="M0,0H5.407V5.407H0Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>
