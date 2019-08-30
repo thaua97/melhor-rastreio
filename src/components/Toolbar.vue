@@ -29,9 +29,9 @@ export default {
         align-items center
 
         ul
-        display flex
+            display flex
            
-           @media screen and (min-width: 320px) and (max-width: 520px)
+            @media screen and (min-width: 320px) and (max-width: 520px)
                 display none
 
            li 
