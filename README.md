@@ -1,29 +1,27 @@
-# menvio
+# Melhor Rastreio
 
-## Project setup
+## Principais Dependencias
+
+ - Vue JS
+ - Vuex
+ - Vue Router
+ - Axios
+ - Pug
+ - Stylus
+ - Moment
+ 
+
+## Instalando dependecias
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compilando  para ambiente de desenvolvimento
 ```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
+yarn serve
 ```
 
-### Run your tests
+### Compilando para ambiente de produção
 ```
-yarn run test
+yarn build
 ```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
