@@ -1,10 +1,11 @@
 <template lang="pug">
     span
         nav
-            img(:src="require('../assets/LogoC.svg')")
+            router-link(to="/")
+                img(:src="require('../assets/LogoC.svg')")
             p
                 span Correios 
-                strong PM371835103BR
+                strong {{ tracking }}
         div
             slot
         footer
@@ -26,7 +27,12 @@
 </template>
 <script>
 export default {
-    name: 'MainTemplate'
+    name: 'MainTemplate',
+    computed: {
+        tracking() {
+            return this.$store.getters.getTracking
+        }
+    }
 }
 </script>
 <style lang="stylus" scoped>
@@ -52,13 +58,12 @@ export default {
             font-size 24px 
             display block
     div
-       padding 20px 90px
-       margin 20px
+       padding 40px 150px
+       margin-bottom 20px
        
     footer
         bottom 0
         width 100%
-        position fixed
         background #2BC866
         color #fff
 

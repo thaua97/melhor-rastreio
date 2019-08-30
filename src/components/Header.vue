@@ -6,8 +6,10 @@
                 div
                     h1 O serviço de rastreio exclusivo do Melhor Envio
                     P Um serviço de rastreio de encomendas totalmente gratuito
-                    a QUERO URILIZAR
+                    router-link(to="/rastreio") QUERO URILIZAR
+                    router-link.mob(to="/rastreio") DÊ O PRIMEIRO PASSO
                 img(:src="require('../assets/map.svg')") 
+                img.mobile(:src="require('../assets/map-m.svg')")
 </template>
 <script>
 import Toolbar from './Toolbar'
@@ -32,7 +34,13 @@ export default {
             display flex
             justify-content space-around
             align-items flex-start
-            
+
+            @media screen and (min-width: 320px) and (max-width: 520px)
+                display flex
+                flex-direction column
+                justify-content center
+                align-items center
+
             div
                 width 500
                 margin-left 172px
@@ -40,13 +48,18 @@ export default {
                 flex-direction column
                 align-items flex-start
 
+                @media screen and (min-width: 320px) and (max-width: 520px)
+                    width 100%
+                    margin-left 0            
+
                 h1
                     text-align left
                     color #fff
                     position relative
                     font-weight 900
                     font-size 36px
-                    width 40%
+                    width 60%
+                
                     &:after
                         content " "
                         position absolute
@@ -57,28 +70,57 @@ export default {
                         height 0.5em
                         border-top 4px solid #fff
                         z-index 1
+                    
+                    @media screen and (min-width: 320px) and (max-width: 520px)
+                        width 100%
+                        text-align center
+                        font-size 24px
 
+                        &:after
+                            content " "
+                            border-top none
+                    
                 p
+                    width 50%
                     text-align left
                     color #fff
                     font-size 18px
                     margin 40px 0
-                    width 50%
 
+                    @media screen and (min-width: 320px) and (max-width: 520px)
+                        width 100%
+                        text-align center
+                    
                 a
+                    text-decoration none 
                     text-align center
                     width 120px
                     height 100%;
                     padding 10px
                     border-radius 8px
+                    box-shadow 0 4px 8px 0 rgba(0,0,0,0.2)
                     font-size 14px
                     font-weight 700
                     background #fff
                     color #2BC866
-
+                    transition box-shadow 0.2s
+                    
+                    &:hover
+                        box-shadow 0 4px 8px 0 rgba(0,0,0,0.4)
+                    
+                    @media screen and (min-width: 320px) and (max-width: 520px)
+                        display none
             img
                 margin-right 172px;
-                    
-
-    
+                
+                @media screen and (min-width: 320px) and (max-width: 520px)
+                    display none
+            img.mobile
+                display none 
+                
+                @media screen and (min-width: 320px) and (max-width: 520px)
+                    display inline
+                    margin-right 0
+                    align-self center
+                     
 </style>

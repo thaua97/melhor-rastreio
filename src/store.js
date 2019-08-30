@@ -4,17 +4,26 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    track: []
-  },
-  getters: {
-    getTrack: state => {
-        return state.track.data
+    state: {
+        track: []
+    },
+    getters: {
+        getTrack: state => {
+            return state.track.data
+        },
+        getTracking: state => {
+            return state.track.data.tracking
+        },
+        getEvents: state => {
+            return state.track.data.events.slice().reverse()
+        },
+        getTrackingStatus: state => {
+            return state.track.data.status
+        },
+    },
+    mutations: {
+        setTrack(state, track) {
+            state.track = track
+        }
     }
-  },
-  mutations: {
-    setTrack(state, track) {
-        state.track = track
-    }
-  }
 })

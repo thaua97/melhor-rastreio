@@ -6,7 +6,7 @@
               li 
                 a(href="https://www.melhorenvio.com.br/" target="_BLANK") Melhor Envio
               li 
-                router-link(to="/rastreio") Login
+                a(href="https://www.melhorenvio.com.br/login" target="_BLANK") Login
               li
                 a.button(href="https://www.melhorenvio.com.br/cadastre-se" target="_BLANK") cadastre-se
               
@@ -30,6 +30,10 @@ export default {
 
         ul
            display flex
+           
+          @media screen and (min-width: 320px) and (max-width: 520px)
+                display none
+
            li 
                margin 0 20px
                color #fff
@@ -52,8 +56,5 @@ export default {
 
                 display flex
                 justify-content center
-                align-items center
-                
-
-        
+                align-items center   
 </style>
