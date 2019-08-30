@@ -2,6 +2,7 @@
     <span>
         footer
             p Uma frase grande para companhar essa seção
+            p.mobile Transportadoras
             div
                 img(v-for="image in images" :src="require(`../assets/${image}.svg`)")
                 
@@ -12,7 +13,7 @@ export default {
     name: 'Footer',
     data () {
         return {
-            images: ['correios', 'jadlog', 'viabr', 'latam']
+            images: ['correios', 'viabr', 'jadlog', 'latam']
         }
     }
 }
@@ -38,6 +39,20 @@ export default {
           width 100%
           font-size 1.2rem
           font-weight 900
+          display inline-block
+
+          @media screen and (min-width: 320px) and (max-width: 520px)
+            display none
+        
+        p.mobile
+            display none 
+
+            @media screen and (min-width: 320px) and (max-width: 520px)
+                display inline
+                width 100%
+                font-size 16px
+                text-align center
+                margin-bottom 16px
 
         div
             width 100%
@@ -55,9 +70,11 @@ export default {
                 height auto
                 
                @media screen and (min-width: 320px) and (max-width: 520px)
+                    margin-top 10%
                     display grid
                     grid-template-columns auto auto
-                    padding 5px
+                    grid-row-gap 40px
+                    grid-column-gap 50px
             
 
 </style>

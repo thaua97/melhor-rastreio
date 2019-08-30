@@ -50,7 +50,8 @@ export default {
 
                 @media screen and (min-width: 320px) and (max-width: 520px)
                     width 100%
-                    margin-left 0            
+                    margin-left 0
+                    align-items center          
 
                 h1
                     text-align left
@@ -110,6 +111,29 @@ export default {
                     
                     @media screen and (min-width: 320px) and (max-width: 520px)
                         display none
+
+                a.mob
+                    display none
+                    
+                    @media screen and (min-width: 320px) and (max-width: 520px)
+                        width 100%
+                        height 100%
+                        max-width 200px
+                        padding 10px
+                        margin-bottom 15%
+                        display block
+                        border-radius 8px
+                        box-shadow 0 4px 8px 0 rgba(0,0,0,0.2)
+                        text-decoration none 
+                        text-align center
+                        font-size 14px
+                        font-weight 700
+                        color #2BC866
+                        background #fff
+                        transition box-shadow 0.2s
+                        
+                        &:hover
+                            box-shadow 0 4px 8px 0 rgba(0,0,0,0.4)
             img
                 margin-right 172px;
                 
