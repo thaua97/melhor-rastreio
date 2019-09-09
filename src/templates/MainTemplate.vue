@@ -41,6 +41,11 @@ export default {
         background transparent
         box-shadow 0 0 5px 5px rgba(0,0,0,0.1)
 
+        @media screen and (max-width 530px)
+            width 100%
+            height 100%
+            padding 4px
+
         display flex
         justify-content space-between
         align-items center
