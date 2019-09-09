@@ -5,7 +5,7 @@
                 img(:src="require('../assets/LogoC.svg')")
             p
                 span Correios 
-                strong {{ tracking }}
+                strong {{ tracking || 'Nenhum código'}}
         div
             slot
         footer
@@ -28,11 +28,9 @@
 <script>
 export default {
     name: 'MainTemplate',
-    computed: {
-        tracking() {
-            return this.$store.getters.getTracking
-        }
-    }
+    props: {
+        tracking: String
+    },
 }
 </script>
 <style lang="stylus" scoped>
@@ -48,18 +46,18 @@ export default {
         align-items center
         
         p
-          text-align  right
+            text-align  right
 
-          span
-            font-weight 400
-            font-size 18px
-          strong
-            font-weight 900
-            font-size 24px 
-            display block
+            span
+                font-weight 400
+                font-size 18px
+            strong
+                font-weight 900
+                font-size 24px 
+                display block
     div
-       padding 40px 150px
-       margin-bottom 20px
+        padding 40px 150px
+        margin-bottom 20px
        
     footer
         bottom 0
@@ -72,27 +70,25 @@ export default {
         align-items center
 
         div
-          display flex
-          flex-direction column
-          color #fff
-
-          p
-            margin-bottom 10px
-            color #fff
-            
-            img 
-              margin 0px 10px 
-          
-          p.love
             display flex
-            align-self center
-
-          a
-            margin-bottom 10px
-            text-direction none
+            flex-direction column
             color #fff
 
-       
+            p
+                margin-bottom 10px
+                color #fff
+                
+                img 
+                    margin 0px 10px 
+            
+            p.love
+                display flex
+                align-self center
 
-        
+            a
+                margin-bottom 5%
+                color #fff
+                cursor pointer
+                text-decoration none 
+                background transparent      
 </style>

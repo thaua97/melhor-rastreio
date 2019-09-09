@@ -30,10 +30,12 @@ export default {
     name: 'TimelineTracking',
     computed: {
         events () {
-            return this.$store.getters.getEvents
+            const event = this.$store.getters.getEvents;
+            return event;
         },
         status () {
-            return this.$store.getters.getTrackingStatus
+            const data = this.$store.getters.getTrackingStatus;
+            return data;
         }
     }
 }

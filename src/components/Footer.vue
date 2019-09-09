@@ -4,8 +4,7 @@
             p Uma frase grande para companhar essa seção
             p.mobile Transportadoras
             div
-                img(v-for="image in images" :src="require(`../assets/${image}.svg`)")
-                
+                img(v-for="image in images" :src="require(`../assets/${image}.svg`)")  
     </span>
 </template>
 <script>
@@ -36,13 +35,13 @@ export default {
             align-items center
 
         p
-          width 100%
-          font-size 1.2rem
-          font-weight 900
-          display inline-block
+            width 100%
+            font-size 1.2rem
+            font-weight 900
+            display inline-block
 
-          @media screen and (min-width: 320px) and (max-width: 520px)
-            display none
+            @media screen and (min-width: 320px) and (max-width: 520px)
+                display none
         
         p.mobile
             display none 
@@ -75,6 +74,4 @@ export default {
                     grid-template-columns auto auto
                     grid-row-gap 40px
                     grid-column-gap 50px
-            
-
 </style>

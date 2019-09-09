@@ -145,6 +145,5 @@ export default {
                 @media screen and (min-width: 320px) and (max-width: 520px)
                     display inline
                     margin-right 0
-                    align-self center
-                     
+                    align-self center  
 </style>

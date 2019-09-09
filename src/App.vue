@@ -17,6 +17,6 @@
     height 100%
     width 100%
  a 
-   text-direction none
+   text-direction none important
 
 </style>
