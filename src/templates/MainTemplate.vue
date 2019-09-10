@@ -2,10 +2,10 @@
     span
         nav
             router-link(to="/")
-                img(:src="require('../assets/LogoC.svg')")
+                img.logo(:src="require('../assets/LogoC.svg')")
             p
                 span Correios 
-                strong {{ tracking }}
+                strong {{ tracking || 'Nenhum código'}}
         div
             slot
         footer
@@ -28,11 +28,9 @@
 <script>
 export default {
     name: 'MainTemplate',
-    computed: {
-        tracking() {
-            return this.$store.getters.getTracking
-        }
-    }
+    props: {
+        tracking: String
+    },
 }
 </script>
 <style lang="stylus" scoped>
@@ -43,24 +41,40 @@ export default {
         background transparent
         box-shadow 0 0 5px 5px rgba(0,0,0,0.1)
 
+        @media screen and (max-width 530px)
+            width 100%
+            height 100%
+            padding 4%
+
         display flex
         justify-content space-between
         align-items center
         
         p
-          text-align  right
+            text-align right
 
-          span
-            font-weight 400
-            font-size 18px
-          strong
-            font-weight 900
-            font-size 24px 
-            display block
+            span
+                font-weight 400
+                font-size 1rem
+
+                @media screen and (max-width: 530px)
+                    font-size: 1rem
+            strong
+                font-weight 900
+                font-size 1.4rem
+                display block
+                
+                @media screen and (max-width: 530px)
+                    font-size: 1.2rem
+        .logo
+            width 60%
+            
     div
-       padding 40px 150px
-       margin-bottom 20px
-       
+        padding 40px 150px
+        margin-bottom 20px
+        
+        @media screen and (max-width: 540px)
+            padding 10%
     footer
         bottom 0
         width 100%
@@ -71,28 +85,40 @@ export default {
         justify-content space-around
         align-items center
 
+        @media screen and (max-width: 530px)
+            width 100%
+            padding 4%
+            flex-direction column
+            justify-content center
+            align-items center
+
         div
-          display flex
-          flex-direction column
-          color #fff
-
-          p
-            margin-bottom 10px
-            color #fff
-            
-            img 
-              margin 0px 10px 
-          
-          p.love
             display flex
-            align-self center
-
-          a
-            margin-bottom 10px
-            text-direction none
+            flex-direction column
             color #fff
 
-       
+            p
+                margin-bottom 10px
+                color #fff
+                
+                img 
+                    margin 0px 10px 
 
-        
+                @media screen and (max-width: 530px)
+                    align-items center
+                    text-align center
+            
+            p.love
+                display flex
+                align-self center
+
+            a
+                margin-bottom 5%
+                color #fff
+                cursor pointer
+                text-decoration none 
+                background transparent
+
+                @media screen and (max-width: 530px)
+                    display none    
 </style>

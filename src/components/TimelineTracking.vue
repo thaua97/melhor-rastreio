@@ -30,35 +30,39 @@ export default {
     name: 'TimelineTracking',
     computed: {
         events () {
-            return this.$store.getters.getEvents
+            const event = this.$store.getters.getEvents;
+            return event;
         },
         status () {
-            return this.$store.getters.getTrackingStatus
+            const data = this.$store.getters.getTrackingStatus;
+            return data;
         }
     }
 }
 </script>
 <style lang="stylus" scoped>
     div.container
-        padding 0px 90pxf
-        margin-bottom 90px
+        padding 5%
+        margin-bottom 5%
         display flex
         justify-content center
         align-items center
 
     div.timeline
         display flex
-        padding 0 40px
         text-align center
         display flex
         align-items center
+
+        @media screen and (max-width 530px)
+            display none
 
         .progress
             display flex
             align-items center
             justify-content center
         img
-            width 50px
+            width 50%
             height 100%
         
         .infos
@@ -80,20 +84,20 @@ export default {
                 font-size 12px
         
         .status
-            padding 0px 110px
+            padding 0 100px
             display flex
             justify-content center
             border-top 3px solid #2BC866
             position relative
         
         .inprogress
-            padding 0px 110px
+            padding 0 100px
             display flex
             justify-content center
             border-top 3px solid #626262
         
         .incomming
-            padding 0px 110px
+            padding 0 100px
             display flex
             justify-content center
             border-top 3px solid #D8D8D8

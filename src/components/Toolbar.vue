@@ -6,18 +6,18 @@
               img(v-if="menu === false" :src="require('../assets/menu.svg')")
               img(v-else :src="require('../assets/close.svg')")
             ul
-              li 
-                a(href="https://www.melhorenvio.com.br/" target="_BLANK") Melhor Envio
-              li 
-                a(href="https://www.melhorenvio.com.br/login" target="_BLANK") Login
-              li
-                a.button(href="https://www.melhorenvio.com.br/cadastre-se" target="_BLANK") cadastre-se
+                li 
+                    a(href="https://www.melhorenvio.com.br/" target="_BLANK") Melhor Envio
+                li 
+                    a(href="https://www.melhorenvio.com.br/login" target="_BLANK") Login
+                li
+                    a.button(href="https://www.melhorenvio.com.br/cadastre-se" target="_BLANK") cadastre-se
         ul.mobile-nav(v-if="menu")
-              li 
+            li 
                 a(href="https://www.melhorenvio.com.br/" target="_BLANK") Melhor Envio
-              li 
+            li 
                 a(href="https://www.melhorenvio.com.br/login" target="_BLANK") Login
-              li
+            li
                 a.button(href="https://www.melhorenvio.com.br/cadastre-se" target="_BLANK") cadastre-se   
               
 </template>
@@ -55,39 +55,39 @@ export default {
             display none
             
             @media screen and (min-width: 320px) and (max-width: 520px)
-              display flex
-              border none
-              background transparent
-              cursor pointer
-        ul
-          display flex
-           
-          @media screen and (min-width: 320px) and (max-width: 520px)
-              display none
-           
-          li 
-              margin 0 20px
-              color #fff
-              display flex
-              align-items center
-
-              a
-                color #fff
-                cursor pointer
-                text-decoration none 
-                background transparent
-
-              a.button 
-                cursor pointer
-                text-decoration none
-                color #2BC866
-                background #fff
-                padding 5px
-                border-radius 4px
-
                 display flex
-                justify-content center
+                border none
+                background transparent
+                cursor pointer
+        ul
+            display flex
+           
+            @media screen and (min-width: 320px) and (max-width: 520px)
+                display none
+           
+            li 
+                margin 0 20px
+                color #fff
+                display flex
                 align-items center
+
+                a
+                    color #fff
+                    cursor pointer
+                    text-decoration none 
+                    background transparent
+
+                a.button 
+                    cursor pointer
+                    text-decoration none
+                    color #2BC866
+                    background #fff
+                    padding 5px
+                    border-radius 4px
+
+                    display flex
+                    justify-content center
+                    align-items center
                 
                 
 

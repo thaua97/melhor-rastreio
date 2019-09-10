@@ -11,8 +11,8 @@ export default new Vuex.Store({
         getTrack: state => {
             return state.track.data
         },
-        getTracking: state => {
-            return state.track.data.tracking
+        getTrackId: state => {
+            return  state.track.data.tracking.toString()
         },
         getEvents: state => {
             return state.track.data.events.slice().reverse()
