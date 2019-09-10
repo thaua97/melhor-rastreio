@@ -52,11 +52,17 @@ export default {
             font-size 1.4rem
             font-weight 700
             background-color #fff
+
+            @media screen and (max-width: 530px)
+                font-size: 0.8rem
             
             p   
                 margin-left 20%
                 font-size 1.4rem
                 font-weight 700
+
+                @media screen and (max-width: 530px)
+                    font-size: 0.8rem
             
         td
             padding 3%  

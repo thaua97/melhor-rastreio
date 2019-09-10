@@ -2,7 +2,7 @@
     span
         nav
             router-link(to="/")
-                img(:src="require('../assets/LogoC.svg')")
+                img.logo(:src="require('../assets/LogoC.svg')")
             p
                 span Correios 
                 strong {{ tracking || 'Nenhum código'}}
@@ -44,26 +44,37 @@ export default {
         @media screen and (max-width 530px)
             width 100%
             height 100%
-            padding 4px
+            padding 4%
 
         display flex
         justify-content space-between
         align-items center
         
         p
-            text-align  right
+            text-align right
 
             span
                 font-weight 400
-                font-size 18px
+                font-size 1rem
+
+                @media screen and (max-width: 530px)
+                    font-size: 1rem
             strong
                 font-weight 900
-                font-size 24px 
+                font-size 1.4rem
                 display block
+                
+                @media screen and (max-width: 530px)
+                    font-size: 1.2rem
+        .logo
+            width 60%
+            
     div
         padding 40px 150px
         margin-bottom 20px
-       
+        
+        @media screen and (max-width: 540px)
+            padding 10%
     footer
         bottom 0
         width 100%
@@ -73,6 +84,13 @@ export default {
         display flex
         justify-content space-around
         align-items center
+
+        @media screen and (max-width: 530px)
+            width 100%
+            padding 4%
+            flex-direction column
+            justify-content center
+            align-items center
 
         div
             display flex
@@ -85,6 +103,10 @@ export default {
                 
                 img 
                     margin 0px 10px 
+
+                @media screen and (max-width: 530px)
+                    align-items center
+                    text-align center
             
             p.love
                 display flex
@@ -95,5 +117,8 @@ export default {
                 color #fff
                 cursor pointer
                 text-decoration none 
-                background transparent      
+                background transparent
+
+                @media screen and (max-width: 530px)
+                    display none    
 </style>

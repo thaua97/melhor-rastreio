@@ -1,11 +1,10 @@
 <template lang="pug">
-    <span>
+    span
         footer
             p Uma frase grande para companhar essa seção
             p.mobile Transportadoras
             div
                 img(v-for="image in images" :src="require(`../assets/${image}.svg`)")  
-    </span>
 </template>
 <script>
 export default {

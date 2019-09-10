@@ -1,7 +1,7 @@
 <template lang="pug">
     span
         header
-            Toolbar
+            toolbar
             div.container
                 div
                     h1 O serviço de rastreio exclusivo do Melhor Envio
@@ -17,7 +17,7 @@ import Toolbar from './Toolbar'
 export default {
     name: 'Header',
     components: {
-        Toolbar
+        'toolbar': Toolbar
     }
 }
 </script>
@@ -27,6 +27,11 @@ export default {
         height 100%
         background #2BC866
 
+        @media screen and (max-width: 530px)
+            background-image url('../assets/bg.png')
+            background-origin center
+            background-size 100%
+        
         div.container
             height 100%
             padding 90px 0
@@ -126,7 +131,7 @@ export default {
                         box-shadow 0 4px 8px 0 rgba(0,0,0,0.2)
                         text-decoration none 
                         text-align center
-                        font-size 14px
+                        font-size 1.4rem
                         font-weight 700
                         color #2BC866
                         background #fff
